@@ -1,0 +1,108 @@
+.nav {
+    height: 60px;
+    font-size: 1.4em;
+}
+
+.navBtn {
+    height: 60px;
+    line-height: 60px;
+}
+
+#gnavi {
+    float: left;
+}
+
+#gnavi .navBtn .bars {
+    display: inline-block;
+    padding: 0 20px;
+    width: 58px;
+    height: 28px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+}
+
+#gnavi .navBtn .bars .bar {
+	display: block;
+	position: absolute;
+	width: 18px;
+	height: 2px;
+	background-color: #1A1A1A;
+	transition: 375ms;
+	transition-property: top, opacity;
+}
+
+#gnavi .navBtn .bars .bar:nth-child(1) {
+	top: 6px;
+	opacity: 1;
+	transition-delay: 125ms;
+}
+
+#gnavi .navBtn .bars .bar:nth-child(2) {
+	top: 12px;
+	transition-delay: 80ms;
+}
+
+#gnavi .navBtn .bars .bar:nth-child(3) {
+	top: 18px;
+	transition-delay: 40ms;
+}
+
+#gnavi .navBtn .bars .bar:nth-child(4) {
+	top: 24px;
+	opacity: 0;
+	transition-delay: 0ms;
+}
+
+#gnavi .navBtn:hover .bars .bar:nth-child(1) {
+	top: 0px;
+	opacity: 0;
+	transition-delay: 0ms;
+}
+
+#gnavi .navBtn:hover .bars .bar:nth-child(2) {
+	top: 6px;
+	transition-delay: 40ms;
+}
+
+#gnavi .navBtn:hover .bars .bar:nth-child(3) {
+	top: 12px;
+	transition-delay: 80ms;
+}
+
+#gnavi .navBtn:hover .bars .bar:nth-child(4) {
+	top: 18px;
+	opacity: 1;
+	transition-delay: 125ms;
+}
+
+#gnavi.nav-open .navBtn .bars .bar:nth-child(1) {
+	top: 12px;
+	transform-origin:50% 50%;
+	transform: rotate(45deg) scaleX(1.442);
+	opacity: 1;
+	transition-delay: 0ms;
+	transition-property: top, transform;
+}
+
+#gnavi.nav-open .navBtn .bars .bar:nth-child(2) {
+	top: 12px;
+	opacity: 0;
+	transition-delay: 0ms;
+}
+
+#gnavi.nav-open .navBtn .bars .bar:nth-child(3) {
+	top: 12px;
+	transform-origin:50% 50%;
+	transform: rotate(-45deg) scaleX(1.442);
+	transition-delay: 0ms;
+	transition-property: top, transform;
+}
+
+#gnavi.nav-open .navBtn .bars .bar:nth-child(4) {
+	top: 24px;
+	opacity: 0;
+	transition: 0ms;
+	transition-delay: 0ms;
+}
+
